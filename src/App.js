@@ -7,38 +7,39 @@ import Forecast from "./Forecast";
 export default function App() {
   return (
     <div className="App">
-      <div className="container"></div>
-      <div className="app border p-5 mt-5 rounded shadow">
-        <div className="search-box">
-          <form id="search-form"></form>
-        </div>
-        <Form />
+      <div className="container">
+        <div className="app border p-5 mt-5 rounded shadow">
+          <div className="search-box">
+            <form id="search-form"></form>
+          </div>
+          <Form />
 
-        <div className="overview"></div>
-        <div className="col updated">
-          <h1>
-            <strong id="city-now"></strong>
-          </h1>
-          <ul className="more-info">
-            <li>
-              Last updated: <span id="date"></span>
-            </li>
-            <li className="temp-description" id="temp-description"></li>
-          </ul>
-        </div>
+          <div className="overview"></div>
+          <div className="col updated">
+            <h1>
+              <strong id="city-now"></strong>
+            </h1>
+            <ul className="more-info">
+              <li>
+                Last updated: <span id="date"></span>
+              </li>
+              <li className="temp-description" id="temp-description"></li>
+            </ul>
+          </div>
 
-        <div className="row">
-          <div className="col-sm-6">
-            <div className="d-flex weather-temperature">
-              <img src="" alt="" className="float-left" id="icon" />
-              <strong id="temperature"></strong>
-              <span className="units">ºC</span>
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="d-flex weather-temperature">
+                <img src="" alt="" className="float-left" id="icon" />
+                <strong id="temperature"></strong>
+                <span className="units">ºC</span>
+              </div>
+              <Forecast />
             </div>
-            <Forecast />
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
