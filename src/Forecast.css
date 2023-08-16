@@ -1,0 +1,14 @@
+.weather-forecast {
+  margin-left: 80px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  color: black;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}

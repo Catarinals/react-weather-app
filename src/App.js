@@ -10,9 +10,10 @@ export default function App() {
       <div className="container">
         <div className="app border p-5 mt-5 rounded shadow">
           <div className="search-box">
-            <form id="search-form"></form>
+            <form id="search-form">
+              <Form />
+            </form>
           </div>
-          <Form />
 
           <div className="overview"></div>
           <div className="col updated">
