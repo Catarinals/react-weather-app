@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Form from "./Form";
 import Footer from "./Footer";
+import "./Footer.css";
 import Forecast from "./Forecast";
 
 export default function App() {

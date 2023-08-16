@@ -8,6 +8,7 @@ export default function Form() {
         placeholder="Enter a city"
         id="enter-city"
         autoComplete="off"
+        autoFocus="on"
       />{" "}
       <button type="submit" className="btn btn-light btn-outline-dark">
         Search
