@@ -11,14 +11,14 @@ export default function Weather(props) {
     console.log(response);
     setWeatherData({
       ready: true,
-      temperature: response.data.daily[0].temperature.day,
-      humidity: response.data.daily[0].temperature.humidity,
-      date: new Date(response.data.daily[0].time * 1000),
-      description: response.data.daily[0].condition.description,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
       iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
-      wind: response.data.daily[0].wind.speed,
-      city: response.data.city,
+        "https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
+      wind: response.data.wind.speed,
+      city: response.data.name,
     });
   }
 
@@ -60,7 +60,7 @@ export default function Weather(props) {
                 <div className="d-flex weather-temperature">
                   <img
                     src={weatherData.iconUrl}
-                    alt=""
+                    alt="Clear sky"
                     className="float-left"
                     id="icon"
                   />
@@ -89,8 +89,8 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "ea011et20fa37354b09b96e56b43o2f3";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.defaultCity}&key=${apiKey}&units=metric `;
+    const apiKey = "1fd8093fa5ff12d796d7de756cc9d6b9";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric `;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
