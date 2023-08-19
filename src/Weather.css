@@ -28,12 +28,18 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
+.search-box {
+  text-align: right;
+}
+
 .city {
   font-size: 40px;
 }
 
 .temp-description {
   font-weight: bold;
+  font-size: smaller;
 }
 
 .weather-temperature canvas {
@@ -51,20 +57,16 @@ li:first-letter {
 .weather-temperature .units {
   position: relative;
   font-size: 15px;
-  top: 4px;
+  top: -22px;
   margin-left: 2px;
   line-height: 1;
 }
 
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
+.units a {
   text-decoration: none;
 }
 
+/*
 .weather-forecast {
   margin-left: 80px;
   text-align: center;
@@ -79,12 +81,15 @@ li:first-letter {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+*/
 
-.search-box {
-  text-align: right;
+.last-updated {
+  list-style: none;
+  padding: 10px;
 }
 
 .more-info {
   list-style: none;
   padding: 10px;
+  margin: 0 auto;
 }

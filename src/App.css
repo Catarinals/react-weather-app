@@ -1,5 +1,5 @@
 .app {
-  max-width: 1500px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 4px 14px;
   border-radius: 10px;
@@ -9,4 +9,8 @@
     rgb(154, 214, 212) 55.4%,
     rgb(255, 233, 171) 100.2%
   );
+}
+
+.app button {
+  padding: 3px 12px;
 }
