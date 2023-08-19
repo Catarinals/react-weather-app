@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Form from "./Form";
 import Footer from "./Footer";
-import FormattedDate from "./FormattedDate";
+import Weatherinfo from "./Weatherinfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -27,64 +26,34 @@ export default function Weather(props) {
       <div className="App">
         <div className="container">
           <div className="app border p-5 mt-5 rounded shadow">
-            <div className="search-box">
-              <form id="search-form">
-                <Form />
-              </form>
-            </div>
-
-            <div className="overview"></div>
-            <div className="col updated">
-              <h1>
-                <strong className="city" id="city-now">
-                  {weatherData.city}
-                </strong>
-              </h1>
-              <ul className="more-info">
-                <li>
-                  Last updated:{" "}
-                  <span id="date">
-                    <FormattedDate date={weatherData.date} />
-                  </span>
-                </li>
-                <li
-                  className="temp-description text-capitalize"
-                  id="temp-description">
-                  {weatherData.description}
-                </li>
-              </ul>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-6">
-                <div className="d-flex weather-temperature">
-                  <img
-                    src={weatherData.iconUrl}
-                    alt="Clear sky"
-                    className="float-left"
-                    id="icon"
-                  />
-                  <strong id="temperature">
-                    {Math.round(weatherData.temperature)}
-                  </strong>
-                  <span className="units">ºC</span>
-                </div>
-                <div className="col-sm-12">
-                  <ul className="more-info">
-                    <li>
-                      Humidity:{" "}
-                      <span id="humidity">{weatherData.humidity}</span> %
-                    </li>
-                    <li>
-                      Wind:{" "}
-                      <span id="wind">{Math.round(weatherData.wind)}</span> km/h
-                    </li>
-                  </ul>
+            <form id="search-form">
+              <div className="search-box">
+                <div className="Form">
+                  <input
+                    type="search"
+                    placeholder="Enter a city"
+                    id="enter-city"
+                    autoComplete="off"
+                    autoFocus="on"
+                  />{" "}
+                  <button
+                    type="submit"
+                    className="btn btn-light btn-outline-dark">
+                    Search
+                  </button>{" "}
+                  <button
+                    type="button"
+                    className="btn btn-light btn-outline-dark"
+                    id="current-location">
+                    Current
+                  </button>
                 </div>
               </div>
-            </div>
+            </form>
+            <Weatherinfo data={weatherData} />
+
+            <Footer />
           </div>
-          <Footer />
         </div>
       </div>
     );
