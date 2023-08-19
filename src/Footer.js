@@ -13,7 +13,7 @@ export default function Footer() {
       </a>{" "}
       and is{" "}
       <a
-        href="https://master--capable-churros-b3c915.netlify.app/"
+        href="https://github.com/Catarinals/react-weather-app"
         rel="noreferrer"
         target="_blank">
         {" "}
