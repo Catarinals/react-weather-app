@@ -7,6 +7,10 @@ h1 {
   font-size: 55px;
 }
 
+.city {
+  color: #b3dbca;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -32,24 +36,23 @@ li:first-letter {
   font-weight: bold;
 }
 
-.weather-temperature img {
+.weather-temperature canvas {
   margin-right: 6px;
-  height: 80px;
-  width: 80px;
+  display: inline-block;
 }
 
 .weather-temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 50px;
-  line-height: 1;
+  font-size: 45px;
+  line-height: 1.1;
   font-weight: 300;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 18px;
-  top: -3px;
-  margin-left: 5px;
+  font-size: 15px;
+  top: 4px;
+  margin-left: 2px;
   line-height: 1;
 }
 
