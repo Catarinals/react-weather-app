@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import Footer from "./Footer";
 import Weatherinfo from "./Weatherinfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -45,7 +46,7 @@ export default function Weather(props) {
               <div className="Form">
                 <input
                   type="search"
-                  placeholder="Enter a city"
+                  placeholder="Enter a city..."
                   id="enter-city"
                   autoComplete="off"
                   autoFocus="on"
@@ -60,6 +61,7 @@ export default function Weather(props) {
             </div>
           </form>
           <Weatherinfo data={weatherData} />
+          <WeatherForecast />
         </div>
 
         <Footer />
