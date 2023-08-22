@@ -11,13 +11,21 @@ export default function Footer() {
         target="_blank">
         Catarina Santos
       </a>{" "}
-      and is{" "}
+      is{" "}
       <a
         href="https://github.com/Catarinals/react-weather-app"
         rel="noreferrer"
         target="_blank">
         {" "}
         open-sourced on GitHub
+      </a>{" "}
+      and
+      <a
+        href="https://capable-churros-b3c915.netlify.app"
+        rel="noreferrer"
+        target="_blank">
+        {" "}
+        hosted on Netlify
       </a>
     </div>
   );
