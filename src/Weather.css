@@ -8,7 +8,8 @@ h1 {
 }
 
 .city {
-  color: #b3dbca;
+  opacity: 0.5;
+  font-size: 40px;
 }
 
 ul {
@@ -33,10 +34,6 @@ li:first-letter {
   text-align: right;
 }
 
-.city {
-  font-size: 40px;
-}
-
 .temp-description {
   font-weight: bold;
   font-size: smaller;
@@ -47,9 +44,17 @@ li:first-letter {
   display: inline-block;
 }
 
+.main-icon {
+  margin-top: -11px;
+}
+
+.animated-icon {
+  opacity: 0.5;
+}
+
 .weather-temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 45px;
+  font-size: 40px;
   line-height: 1.1;
   font-weight: 300;
 }
@@ -75,4 +80,6 @@ li:first-letter {
   list-style: none;
   padding: 10px;
   margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: -9px;
 }
